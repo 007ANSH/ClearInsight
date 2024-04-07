@@ -28,7 +28,12 @@ function home() {
   }, [isAuthLoading, nameOfOrg]);
 
   if (isAuthLoading || isDataLoading) {
-    return <div>Loading...</div>;
+    return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+      <span role="status">Loading...</span>
+    </button>
+  </div>;
   }
 
   const handleSupport = async (e) => {

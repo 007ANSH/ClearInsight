@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 import Login from "./Login";
 import './Page3.css';
 
@@ -7,15 +8,19 @@ export default function Page3() {
   const [name, setName] = useState('');
   const [admin, setAdmin] = useState('');
   const [nameOfOrg, setNameOfOrg] = useState('');
-  const [email, setEmail] = useState('');
+  const {user,isLoading} = useAuth0();
+  const [email, setEmail] = useState(user ? user.email : '');
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
+  if (isLoading) {
+    return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+      <span role="status">Loading...</span>
+    </button>
+  </div>;
   }
+  console.log(user)
 
-  const handleAdminChange = (event) => {
-    setAdmin(event.target.value);
-  }
 
   const sendData = async (event) => {
     event.preventDefault();
@@ -57,8 +62,8 @@ export default function Page3() {
 
         <div class="input-group mb-3">
   <input type="text" class="form-control" name='nameOfOrg' onChange={(e) => setNameOfOrg(e.target.value)} placeholder="Name Of Org" aria-label="Username"/>
-  <span class="input-group-text">@</span>
-  <input type="text" class="form-control" name='email' onChange={(e) => setEmail(e.target.value)}  placeholder="Email" aria-label="Server"/>
+  {/* <span class="input-group-text">@</span> */}
+  {/* <input type="text" class="form-control" name='email' onChange={(e) => setEmail(e.target.value)}  placeholder="Email" aria-label="Server"/> */}
 </div>
 
 

@@ -76,6 +76,10 @@ app.get('/getData/:nameOfOrg',async (req, res) => {
   // console.log("it")
   const nameOfOrg=req.params.nameOfOrg;
   const data=await User.findOne({nameOfOrg:nameOfOrg});
+  if (!data) {
+    return res.status(404).send("User not found");
+  }
+  
   res.send(data.feed);
 });
 
