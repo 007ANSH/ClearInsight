@@ -34,7 +34,9 @@ app.post('/addFeed',async (req, res) => {
   const feed=req.body.feed;
   const user=await User.findOne({nameOfOrg:nameOfOrg});
   console.log(feed)
+  if(feed)
   user.feed.push(feed);
+
   await user.save();
   res.send(req.body)
 });

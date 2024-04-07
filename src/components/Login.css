@@ -35,3 +35,6 @@
   .btn{
     margin-top: 5px;
   }  
+  .nav-item:hover {
+    color: #FE4D69; /* Change to the color you want on hover */
+}

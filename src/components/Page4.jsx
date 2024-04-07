@@ -4,6 +4,7 @@ import axios from "axios";
 import React from "react";
 import "./Page4.css";
 import uuid from "react-uuid";
+import { Link } from "react-router-dom";
 
 export default function Page4() {
   let { nameOfOrg } = useParams();
@@ -53,7 +54,7 @@ export default function Page4() {
 
             <button onClick={handleSubmit}  className="d" type="submit">
               
-              Post
+            <Link to={`/${nameOfOrg}`}> Post</Link> 
             </button>
           </form>
         </div>

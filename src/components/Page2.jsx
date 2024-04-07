@@ -22,13 +22,14 @@ export default function Page2() {
 
     <Login/>
     <div className='box flex-container'>
+    <img src="2.png" alt=""  className="bottom-left-img1" />
       <div className="text">
         <h1>Hello {user.name}</h1>
       </div>
       <div className="btn2">
       {/* <Logo/> */}
-      <button type="button" className="x"><NavLink to='/page3'>Create Query page</NavLink></button> 
-      <button type="button" className="y"><NavLink to='/filter'>  Select Query page </NavLink></button> 
+      <button type="button" className="x"><NavLink to='/page3'  style={{ color: 'black' }}>Create Query page</NavLink></button> 
+      <button type="button" className="y"><NavLink to='/filter'  style={{ color: 'black' }}>  Select Query page </NavLink></button> 
       </div>
        
     </div>      

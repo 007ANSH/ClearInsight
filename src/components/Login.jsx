@@ -21,18 +21,18 @@ export default function Navbar() {
           </div>
           <div className="mid ">
             <ul className="even ">
-              <li className="nav-item" style={{}}>
+              <li className="nav-item" style={{fontSize: '20px'}}>
                 <NavLink to="/page2" className="nav-link">
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item" style={{}}>
+              <li className="nav-item" style={{fontSize: '20px'}}>
                 <NavLink to="/about" className="nav-link">
                   About
                 </NavLink>
               </li>
 
-              <li className="nav-item" style={{}}>
+              <li className="nav-item" style={{fontSize: '20px'}}>
                 <NavLink to="/contact" className="nav-link">
                   Contact Us
                 </NavLink>

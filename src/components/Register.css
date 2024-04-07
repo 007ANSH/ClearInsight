@@ -2,24 +2,22 @@
   display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 225px;
+    /* margin-top: 225px; */
     margin-bottom: 45px;
     margin-left: 40px;
     margin-right: 40px;
     color:#D3D4D7;
+    font-size:50px;
   }.xyz{
     background-color: #FE4D69;
     border-radius: 25px;
     font-size: 20px;
     padding: 15px 100px; 
-    /* transition-duration: 0.4s; */
-    /* box-shadow: 0 8px 16px 0 rgba(243, 239, 239, 0.99), 0 6px 5px 0 rgba(236, 234, 240, 0.19); */
+  
   }
   
   .xyz:hover {
-    /* background-color: #de5089;  */
-    color: rgb(16, 16, 20);
-    /* padding-bottom: 2px; */
+    background-color: #FF7F8A;
   }
   .box{
     width: 100vw;
@@ -28,4 +26,13 @@
   .box{
     display: flex;
   }
-  
+  .bottom-left-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.logoo{
+  position: absolute;
+  /* margin-bottom: 0px; */
+  bottom: 50vh;
+}
