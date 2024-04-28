@@ -8,7 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     domain="dev-lulm3gjulga1iuae.us.auth0.com"
     clientId="YBtBTpCsFnvgirqwQSBINZKpYEfBPVOO"
     authorizationParams={{
-      redirect_uri: "https://clear-insight-pq7yuq498-anshs-projects-bb4a175c.vercel.app/page2"
+      redirect_uri: "https://clear-insight.vercel.app/page2"
     }}
   >
     <App />
