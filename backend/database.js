@@ -1,6 +1,7 @@
 
 import mongoose from 'mongoose';
-mongoose.connect("mongodb+srv://anshgusain08:Jc2NRxaNewtdobgO@cluster0.p6nkpqw.mongodb.net/");
+import dotenv from 'dotenv';
+mongoose.connect(process.env.MONGODB_URI);
 
 const user=mongoose.Schema({
     nameOfOrg:String,

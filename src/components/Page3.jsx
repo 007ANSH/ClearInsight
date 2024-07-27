@@ -40,7 +40,7 @@ export default function Page3() {
   
       const data = await response.json();
   
-      // Handle the response data here
+     
       console.log(data);
     } catch (error) {
       console.error('Error:', error);
